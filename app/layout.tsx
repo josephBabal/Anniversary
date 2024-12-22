@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Dancing_Script, Lora } from 'next/font/google'; 
-import "./globals.css";
+import "./globals.scss";
 
 export const metadata: Metadata = {
   title: "Create Next App",
