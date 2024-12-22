@@ -1,0 +1,131 @@
+// Spacing System
+$spacing-system: (
+  0: 0,
+  1: 4px,
+  2: 8px,
+  3: 12px, // 4px x 3
+  4: 16px, // 4px x 4 or 8px x 2
+  5: 20px, // 4px x 5
+  6: 24px, // 4px x 6 or 8px x 3
+  8: 32px, // 8px x 4
+  10: 40px, // 8px x 5
+  12: 48px, // 8px x 6
+  16: 64px, // 8px x 8
+  20: 80px  // 8px x 10
+);
+
+// Generate Mixins and Classes for Margin and Padding
+@mixin generate-spacing-utilities {
+  @each $key, $value in $spacing-system {
+    // Margin Mixins and Classes
+    @mixin m-#{$key} {
+      margin: $value;
+    }
+    .m-#{$key} {
+      margin: $value;
+    }
+    
+    @mixin mt-#{$key} {
+      margin-top: $value;
+    }
+    .mt-#{$key} {
+      margin-top: $value;
+    }
+
+    @mixin mb-#{$key} {
+      margin-bottom: $value;
+    }
+    .mb-#{$key} {
+      margin-bottom: $value;
+    }
+
+    @mixin ml-#{$key} {
+      margin-left: $value;
+    }
+    .ml-#{$key} {
+      margin-left: $value;
+    }
+
+    @mixin mr-#{$key} {
+      margin-right: $value;
+    }
+    .mr-#{$key} {
+      margin-right: $value;
+    }
+
+    @mixin mx-#{$key} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+    .mx-#{$key} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+
+    @mixin my-#{$key} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+    .my-#{$key} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+
+    // Padding Mixins and Classes
+    @mixin p-#{$key} {
+      padding: $value;
+    }
+    .p-#{$key} {
+      padding: $value;
+    }
+
+    @mixin pt-#{$key} {
+      padding-top: $value;
+    }
+    .pt-#{$key} {
+      padding-top: $value;
+    }
+
+    @mixin pb-#{$key} {
+      padding-bottom: $value;
+    }
+    .pb-#{$key} {
+      padding-bottom: $value;
+    }
+
+    @mixin pl-#{$key} {
+      padding-left: $value;
+    }
+    .pl-#{$key} {
+      padding-left: $value;
+    }
+
+    @mixin pr-#{$key} {
+      padding-right: $value;
+    }
+    .pr-#{$key} {
+      padding-right: $value;
+    }
+
+    @mixin px-#{$key} {
+      padding-left: $value;
+      padding-right: $value;
+    }
+    .px-#{$key} {
+      padding-left: $value;
+      padding-right: $value;
+    }
+
+    @mixin py-#{$key} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+    .py-#{$key} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+  }
+}
+
+// Call the Mixin to Generate Both Classes and Mixins
+@include generate-spacing-utilities;
