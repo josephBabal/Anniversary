@@ -1,19 +1,9 @@
 "use client";
 
-import { motion, useInView } from "motion/react";
-import { useRef } from "react";
 import { FadeIn } from "@/components/fade-in";
 
 
 const TextComponent = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
-
   const text1 = process.env.NEXT_PUBLIC_TEXT_1;
   const text2 = process.env.NEXT_PUBLIC_TEXT_2;
   const text3 = process.env.NEXT_PUBLIC_TEXT_3;
