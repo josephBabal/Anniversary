@@ -7,7 +7,6 @@ const Question = () => {
   const {
     questionRef,
     images,
-    noClickCount,
     currentImageIndex,
     imageVisible,
     noButtonPosition,
