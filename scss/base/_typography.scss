@@ -1,0 +1,138 @@
+// _typography.scss
+
+// Base font family
+$font-family-base: 'Lora', serif;  // Body font (serif, elegant)
+$font-family-heading: 'Dancing Script', cursive;  // Heading font (for romantic feel)
+
+// Font size and line height scale
+$font-size-base: 16px;  // Base font size (for body text)
+$line-height-base: 1.5;  // Line height for body text
+
+// Heading scaling
+$heading-scale: ( // Font scaling for headings
+  1: 7.5rem, // H1
+  2: 5.5rem, // H2
+  3: 3rem,  // H3
+  4: 2.5rem, // H4
+  5: 1.25rem, // H5
+  6: 1rem  // H6
+);
+
+// Additional text size categories
+$text-size-scale: ( // Text size scale for various text types
+  normal: $font-size-base,       // Regular body text
+  medium: 1.125rem,              // Medium text (18px)
+  large: 1.5rem,                 // Large text (24px)
+  small: 0.875rem,               // Small text (14px)
+  xs: 0.75rem                    // Extra Small text (12px)
+);
+
+// Font weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;  // Medium weight for medium text
+$font-weight-bold: 700;
+
+// Helper function for line height
+@function line-height($size) {
+  @return $size * $line-height-base;
+}
+
+// Mixin for text elements (applies base styles)
+@mixin text-styles($font-family, $font-size, $font-weight, $line-height) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+// Body text
+body {
+  @include text-styles($font-family-base, map-get($text-size-scale, normal), $font-weight-regular, line-height(map-get($text-size-scale, normal)));
+  color: $off-white; // Default body text color
+  margin: 0;
+  padding: 0;
+}
+
+// Headings (using the $heading-scale)
+h1, .h1 {
+  @include text-styles($font-family-heading, map-get($heading-scale, 4), $font-weight-bold, line-height(map-get($heading-scale, 4)));
+  margin-bottom: 16px; // Add bottom margin
+  
+  @include baa {
+    @include text-styles($font-family-heading, map-get($heading-scale, 1), $font-weight-bold, line-height(map-get($heading-scale, 1)));
+  }
+}
+
+h2, .h2 {
+  @include text-styles($font-family-heading, map-get($heading-scale, 2), $font-weight-bold, line-height(map-get($heading-scale, 2)));
+  margin-bottom: 12px;
+}
+
+h3, .h3 {
+  @include text-styles($font-family-heading, map-get($heading-scale, 3), $font-weight-regular, line-height(map-get($heading-scale, 3)));
+  margin-bottom: 8px;
+}
+
+h4, .h4 {
+  @include text-styles($font-family-heading, map-get($heading-scale, 4), $font-weight-regular, line-height(map-get($heading-scale, 4)));
+}
+
+h5, .h5 {
+  @include text-styles($font-family-heading, map-get($heading-scale, 6), $font-weight-regular, line-height(map-get($heading-scale, 6)));  
+  
+  @include baa {
+    @include text-styles($font-family-heading, map-get($heading-scale, 5), $font-weight-regular, line-height(map-get($heading-scale, 5)));
+
+  }
+
+}
+
+h6, .h6 {
+  @include text-styles($font-family-heading, map-get($heading-scale, 6), $font-weight-regular, line-height(map-get($heading-scale, 6)));
+}
+
+// Paragraphs (Normal text size by default)
+p {
+  @include text-styles($font-family-base, map-get($text-size-scale, normal), $font-weight-regular, line-height(map-get($text-size-scale, normal)));
+  margin-bottom: 16px;
+}
+
+// Medium Text (for emphasis or subheadings)
+.medium-text {
+  @include text-styles($font-family-base, map-get($text-size-scale, medium), $font-weight-regular, line-height(map-get($text-size-scale, medium)));
+  margin-bottom: 12px;
+}
+
+// Large Text (for larger text such as quotes or large body text)
+.large-text {
+  @include text-styles($font-family-base, map-get($text-size-scale, large), $font-weight-regular, line-height(map-get($text-size-scale, large)));
+  margin-bottom: 16px;
+}
+
+// Small Text (for small print or captions)
+.small-text {
+  @include text-styles($font-family-base, map-get($text-size-scale, small), $font-weight-regular, line-height(map-get($text-size-scale, small)));
+  margin-bottom: 8px;
+}
+
+// Extra Small Text (for very small text, like footnotes or disclaimers)
+.xs-text {
+  @include text-styles($font-family-base, map-get($text-size-scale, xs), $font-weight-regular, line-height(map-get($text-size-scale, xs)));
+  margin-bottom: 4px;
+}
+
+// Links
+a {
+  font-family: $font-family-base;
+  font-weight: $font-weight-bold;
+  color: #007bff; 
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+p.h5 {
+  font-family: $font-family-base
+}

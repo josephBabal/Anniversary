@@ -1,0 +1,42 @@
+.max-container {
+  max-width: $maxContentWidth;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  background: $soft-pink;
+  color: $black;
+  text-transform: uppercase;
+  transition: 250ms;
+  font-family: initial;
+
+  @include baa {
+    font-size: 16px;
+    padding: 16px 24px;
+  }
+
+  &:hover {
+    background: $soft-pink-hover;
+  }
+
+  &.secondary {
+    background: $light-grey;
+
+    &:hover {
+      background: $light-grey-hover;
+    }
+  }
+}
+
