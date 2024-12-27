@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "motion/react";
 import { MotionSpan } from "@/components/Motion/MotionSpan";
 import Rose from "@/components/rose/Rose";
 
