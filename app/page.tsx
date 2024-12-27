@@ -1,8 +1,25 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import Rose from '@/components/rose/Rose';
+import Intro from '@/components/intro/Intro';
+import TextComponent from "@/components/Text/Text";
+import ScrollIndicator from "@/components/scroll-indicator/scroll-indicator";
+import Question from "@/components/question/question";
 
 export default function Home() {
   return (
-  <h1>afdf</h1>
+    <div className="max-container home">
+      <Intro />
+
+      <TextComponent  />
+
+      <ScrollIndicator />
+
+
+      <Question />
+
+
+
+    </div>
+
   );
 }

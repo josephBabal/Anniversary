@@ -1,0 +1,28 @@
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 6rem;
+  position: relative;
+  max-height: fit-content;
+
+  &__btns {
+    display: flex;
+    gap: 1rem;
+  }
+
+  img {
+    position: absolute;
+    opacity: 0;
+    width: 300px;
+
+    @include baa {
+      width: 500px;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}

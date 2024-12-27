@@ -1,18 +1,25 @@
+//* base
+@import '/scss/base/breakpoints';
+@import '/scss/base/spacing';
+@import '/scss/base/colors';
+@import '/scss/base/typography';
+@import '/scss/base/utility';
+
+//* components
+@import '/scss/components/intro';
+@import '/scss/components/rose';
+@import '/scss/components/text';
+@import '/scss/components/scroll-indicator';
+@import '/scss/components/question';
+
+//* pages 
+@import '/scss/pages/home';
+@import '/scss/pages/yes';
+
 body {
-  font-family: 'Dancing Script';
+  background: $off-black;
 }
 
-/* Apply Dancing Script font to paragraphs */
-p {
-  font-family: 'Dancing Script';
-}
-
-/* You can also apply it to other elements like headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Dancing Script';
-}
-
-/* If you want to apply it to all text elements (optional) */
-body, p, h1, h2, h3, h4, h5, h6, span {
-  font-family: 'Dancing Script';
+.test {
+  padding: 8rem;
 }

@@ -1,0 +1,19 @@
+.text-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+
+.text-container p {
+  color: $off-white;
+  font-family: $font-family-base;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 167.5%;
+
+  &.copy {
+    padding-bottom: 1rem;
+  }
+}
+

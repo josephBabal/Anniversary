@@ -1,0 +1,80 @@
+// Spacing System
+$spacing-system: (
+  0: 0,
+  1: 4px,
+  2: 8px,
+  3: 12px, // 4px x 3
+  4: 16px, // 4px x 4 or 8px x 2
+  5: 20px, // 4px x 5
+  6: 24px, // 4px x 6 or 8px x 3
+  8: 32px, // 8px x 4
+  10: 40px, // 8px x 5
+  12: 48px, // 8px x 6
+  16: 64px, // 8px x 8
+  20: 80px  // 8px x 10
+);
+
+// Generate Classes for Margin and Padding
+@each $key, $value in $spacing-system {
+  // Margin Classes
+  .m-#{$key} {
+    margin: $value;
+  }
+
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+
+  .mx-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .my-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  // Padding Classes
+  .p-#{$key} {
+    padding: $value;
+  }
+
+  .pt-#{$key} {
+    padding-top: $value;
+  }
+
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$key} {
+    padding-left: $value;
+  }
+
+  .pr-#{$key} {
+    padding-right: $value;
+  }
+
+  .px-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  .py-#{$key} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+}
